@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="LPA-cB-NJv">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingViewController" id="60q-Em-WyW" customClass="OnboardingViewController" customModule="CoordinatorsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ts-zz-pYR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9tx-ch-MZA">
+                                <rect key="frame" x="159.5" y="417.5" width="95.5" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vA8-1M-8Ky">
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="41"/>
+                                        <string key="text">Welcome to 
+Onboarding</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-XD-rcz">
+                                        <rect key="frame" x="0.0" y="41" width="95.5" height="30"/>
+                                        <state key="normal" title="Next"/>
+                                        <connections>
+                                            <action selector="nextAction:" destination="60q-Em-WyW" eventType="touchUpInside" id="2U4-kT-rAS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9tx-ch-MZA" firstAttribute="centerY" secondItem="Nyq-G6-3wz" secondAttribute="centerY" id="RrR-L4-74Q"/>
+                            <constraint firstItem="9tx-ch-MZA" firstAttribute="centerX" secondItem="Nyq-G6-3wz" secondAttribute="centerX" id="hdn-hd-olo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Nyq-G6-3wz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mQS-2G-Vge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="55"/>
+        </scene>
+        <!--Onboarding Actions View Controller-->
+        <scene sceneID="mCG-Li-drt">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingActionsViewController" id="ZyH-D5-ysG" customClass="OnboardingActionsViewController" customModule="CoordinatorsDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2g6-8R-yt9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JRh-oy-bgH">
+                                <rect key="frame" x="145.5" y="408" width="123" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLb-IB-wQC">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="loginAction:" destination="ZyH-D5-ysG" eventType="touchUpInside" id="hjq-9J-r50"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sH8-F9-dmH">
+                                        <rect key="frame" x="0.0" y="30" width="123" height="30"/>
+                                        <state key="normal" title="Signup"/>
+                                        <connections>
+                                            <action selector="signupAction:" destination="ZyH-D5-ysG" eventType="touchUpInside" id="9wu-Rc-4Ri"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zML-TP-jv4">
+                                        <rect key="frame" x="0.0" y="60" width="123" height="30"/>
+                                        <state key="normal" title="Just Create Post!!"/>
+                                        <connections>
+                                            <action selector="createPostAction:" destination="ZyH-D5-ysG" eventType="touchUpInside" id="26l-Ju-Zg0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JRh-oy-bgH" firstAttribute="centerY" secondItem="dy8-SC-cfL" secondAttribute="centerY" id="Ufq-zB-9HV"/>
+                            <constraint firstItem="JRh-oy-bgH" firstAttribute="centerX" secondItem="dy8-SC-cfL" secondAttribute="centerX" id="noR-Yl-3t0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dy8-SC-cfL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTL-xD-xyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="55"/>
+        </scene>
+    </scenes>
+</document>
