@@ -14,8 +14,10 @@ class AppSetup {
     let appCoordinator: AppCoordinator
 
     init(windowScene: UIWindowScene) {
+        // Setup the app
         self.window = UIWindow(windowScene: windowScene)
         let rootViewController = UINavigationController()
+        // Create Root Coordinator
         self.appCoordinator = AppCoordinator(
             navigationController: rootViewController,
             onboardingCoordinator: { rootViewController  in

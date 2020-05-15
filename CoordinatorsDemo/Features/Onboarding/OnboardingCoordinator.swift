@@ -35,10 +35,12 @@ class OnboardingCoordinator: Coordinator, OnboardingViewControllerDelegate, Onbo
     }
 
 
+    // Screen 1 Delegate
     func onboardingViewControllerDidPressNext(_ viewController: OnboardingViewController) {
         navigationController.pushViewController(onboardingViewFactory.getOnboardingActionsViewController(delegate: self), animated: true)
     }
 
+    // Screen 2 Delegate
     func onboardingActionsViewControllerDidPressLogin(_ viewController: OnboardingActionsViewController) {
         delegate?.onboardingCoodinator(self, result: .login)
     }

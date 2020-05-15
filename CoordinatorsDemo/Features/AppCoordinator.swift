@@ -25,6 +25,7 @@ extension Coordinator {
     }
 }
 
+// Root level Coordinator
 class AppCoordinator: Coordinator, OnboardingCoordinatorDelegate, CreatePostCoordinatorDelegate {
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
@@ -53,6 +54,7 @@ class AppCoordinator: Coordinator, OnboardingCoordinatorDelegate, CreatePostCoor
     }
 
 
+    // Onboarding Delegate
     func onboardingCoodinator(_ coordinator: OnboardingCoordinator, result: OnboardingCoordinatorResults) {
         switch result {
         case .createPost:
@@ -68,6 +70,7 @@ class AppCoordinator: Coordinator, OnboardingCoordinatorDelegate, CreatePostCoor
         }
     }
 
+    // Create Post Delegate
     func createPostCoordinator(_ coordinator: CreatePostCoordinator, didPost message: Message?) {
         self.navigationController.popViewController(animated: true)
         endChildCoordinator(coordinator: coordinator)

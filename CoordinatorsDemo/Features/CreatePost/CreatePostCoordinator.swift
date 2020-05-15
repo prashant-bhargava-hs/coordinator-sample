@@ -20,6 +20,7 @@ class CreatePostCoordinator: Coordinator, CreatePostViewControllerDelegate {
     private let navigationController: UINavigationController
     private let storyboard: UIStoryboard
 
+    // should get a view factory, for now just use storyboard. See onboarding for correct exmple
     init(user: User, navigationController: UINavigationController, storyboard: UIStoryboard) {
         self.user = user
         self.navigationController = navigationController
@@ -33,6 +34,7 @@ class CreatePostCoordinator: Coordinator, CreatePostViewControllerDelegate {
         navigationController.pushViewController(vc, animated: true)
     }
 
+    // Create Post Screen Delegate
     func createPostViewController(_ viewController: CreatePostViewController, didPost message: Message?) {
         delegate?.createPostCoordinator(self, didPost: message)
    }
